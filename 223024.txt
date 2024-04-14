@@ -1,0 +1,312 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Marija@DESKTOP-7U3F981 MINGW64 ~
+$ mkdir SI_2024_lab1_223024
+
+Marija@DESKTOP-7U3F981 MINGW64 ~
+$ cd SI_2024_lab1_223024/
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024
+$ git init
+Initialized empty Git repository in C:/Users/Marija/SI_2024_lab1_223024/.git/
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (master)
+$ git remote add origin https://github.com/Marijjaa/SI_2024_lab1_223024.git
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (master)
+$ git remote -v
+origin  https://github.com/Marijjaa/SI_2024_lab1_223024.git (fetch)
+origin  https://github.com/Marijjaa/SI_2024_lab1_223024.git (push)
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (master)
+$ nano README.md
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (master)
+$ git config --global user.email "stojkovska.marija0@gmail.com"
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (master)
+$ git add --a
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (master)
+$ git commit -m "Initial commit"
+[master (root-commit) 5a41d9c] Initial commit
+ 2 files changed, 3 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 README.txt
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (master)
+$ git add --a
+warning: in the working copy of 'SILab1Main.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SILab1_1.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SILab1_2.java', LF will be replaced by CRLF the next time Git touches it
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (master)
+$ git commit -m "Add starter code"
+[master fe2581d] Add starter code
+ 4 files changed, 47 insertions(+), 1 deletion(-)
+ delete mode 100644 README.txt
+ create mode 100644 SILab1Main.java
+ create mode 100644 SILab1_1.java
+ create mode 100644 SILab1_2.java
+
+$ git push -u origin master
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (9/9), 1.19 KiB | 1.19 MiB/s, done.
+Total 9 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Marijjaa/SI_2024_lab1_223024.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (master)
+$ git branch bug1
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (master)
+$ git branch bug2
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (master)
+$ git branch
+  bug1
+  bug2
+* master
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (master)
+$ git checkout bug1
+Switched to branch 'bug1'
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (bug1)
+$ nano SILab1_1.java
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (bug1)
+$ git add SILab1_1.java
+warning: in the working copy of 'SILab1_1.java', LF will be replaced by CRLF the next time Git touches it
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (bug1)
+$ git commit -m "Fix wrong condition in filterOddLengthStrings"
+[bug1 71547da] Fix wrong condition in filterOddLengthStrings
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+$ git checkout bug2
+Switched to branch 'bug2'
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (bug2)
+$ nano SILab1_2.java
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (bug2)
+$ git add SILab1_2.java
+warning: in the working copy of 'SILab1_2.java', LF will be replaced by CRLF the next time Git touches it
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (bug2)
+$ git commit -m "Fix wrong condition in makeBigStringFrom"
+[bug2 124fcad] Fix wrong condition in makeBigStringFrom
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+$ git checkout bug1
+Switched to branch 'bug1'
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (bug1)
+$ nano SILab1Main.java
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (bug1)
+$ git add SILab1Main.java
+warning: in the working copy of 'SILab1Main.java', LF will be replaced by CRLF the next time Git touches it
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (bug1)
+$ git commit -m "Call method filterOddLengthStrings"
+[bug1 994df22] Call method filterOddLengthStrings
+ 1 file changed, 1 insertion(+)
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (bug1)
+$ git checkout bug2
+Switched to branch 'bug2'
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (bug2)
+$ nano SILab1Main.java
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (bug2)
+$ git add SILab1Main.java
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (bug2)
+$ git commit -m "Call method makeBigStringFrom in main class"
+[bug2 757d996] Call method makeBigStringFrom in main class
+ 1 file changed, 1 insertion(+)
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (bug2)
+$ git push -u origin bug2
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 685 bytes | 685.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+remote:
+remote: Create a pull request for 'bug2' on GitHub by visiting:
+remote:      https://github.com/Marijjaa/SI_2024_lab1_223024/pull/new/bug2
+remote:
+To https://github.com/Marijjaa/SI_2024_lab1_223024.git
+ * [new branch]      bug2 -> bug2
+branch 'bug2' set up to track 'origin/bug2'.
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (bug2)
+$ git checkout bug1
+Switched to branch 'bug1'
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (bug1)
+$ git push -u origin bug1
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 735 bytes | 735.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'bug1' on GitHub by visiting:
+remote:      https://github.com/Marijjaa/SI_2024_lab1_223024/pull/new/bug1
+remote:
+To https://github.com/Marijjaa/SI_2024_lab1_223024.git
+ * [new branch]      bug1 -> bug1
+branch 'bug1' set up to track 'origin/bug1'.
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (bug1)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (master)
+$ git merge bug1
+Updating fe2581d..994df22
+Fast-forward
+ SILab1Main.java | 1 +
+ SILab1_1.java   | 4 ++--
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (master)
+$ git push
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Marijjaa/SI_2024_lab1_223024.git
+   fe2581d..994df22  master -> master
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (master)
+$ git checkout bug2
+Switched to branch 'bug2'
+Your branch is up to date with 'origin/bug2'.
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (bug2)
+$ git rebase master
+Auto-merging SILab1Main.java
+CONFLICT (content): Merge conflict in SILab1Main.java
+error: could not apply 757d996... Call method makeBigStringFrom in main class
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 757d996... Call method makeBigStringFrom in main class
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (bug2|REBASE 2/2)
+$ nano SILab1Main.java
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (bug2|REBASE 2/2)
+$ git add SILab1Main.java
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (bug2|REBASE 2/2)
+$ git rebase --continue
+[detached HEAD 48850aa] Call method makeBigStringFrom in main class
+ 1 file changed, 1 insertion(+)
+Successfully rebased and updated refs/heads/bug2.
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (bug2)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (master)
+$ git merge bug2
+Updating 994df22..48850aa
+Fast-forward
+ SILab1Main.java | 1 +
+ SILab1_2.java   | 4 ++--
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (master)
+$ git push
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 705 bytes | 705.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+giTo https://github.com/Marijjaa/SI_2024_lab1_223024.git
+   994df22..48850aa  master -> master
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (master)
+$ git checkout bug1
+Switched to branch 'bug1'
+Your branch is up to date with 'origin/bug1'.
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (bug1)
+$ git push
+Everything up-to-date
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (bug1)
+$ git checkout bug2
+Switched to branch 'bug2'
+Your branch and 'origin/bug2' have diverged,
+and have 4 and 2 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (bug2)
+$ git push
+To https://github.com/Marijjaa/SI_2024_lab1_223024.git
+ ! [rejected]        bug2 -> bug2 (non-fast-forward)
+error: failed to push some refs to 'https://github.com/Marijjaa/SI_2024_lab1_223024.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (bug2)
+$ git push --force
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Marijjaa/SI_2024_lab1_223024.git
+ + 757d996...48850aa bug2 -> bug2 (forced update)
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (bug2)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Marija@DESKTOP-7U3F981 MINGW64 ~/SI_2024_lab1_223024 (master)
+$ git log >> logs.txt
+
+
+
+
+
+
+
